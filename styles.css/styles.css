@@ -1,0 +1,32 @@
+:root {
+    --primary-text-color: #212121;
+    --secondary-text-color: #757575;
+    --accent-color: #2196F3;
+    --accent-color-white: #FFFFFF;
+
+    --primary-bg-color: #E5E5E5;
+    --secondary-bg-color: #F5F4FA;
+    --gray-bg-color: 2F303A;
+}
+body {
+    background-color: var(--primary-bg-color);
+}
+ul {
+    list-style: none;
+}
+.nav li,
+.nav-contacts li {
+    display: inline;
+}
+.nav a {
+    color: var(--primary-text-color);
+}
+.nav-contacts a {
+    color: var(--secondary-text-color);
+}
+.nav a:hover,
+.nav a:focus,
+.nav-contacts a:hover,
+.nav-contacts a:focus {
+    color: var(--accent-color);
+}
