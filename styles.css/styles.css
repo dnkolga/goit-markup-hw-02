@@ -1,23 +1,31 @@
 :root {
+/* TEXT */
     --primary-text-color: #212121;
     --secondary-text-color: #757575;
     --accent-color: #2196F3;
     --accent-color-white: #FFFFFF;
-
+/* BACKGROUND */
     --primary-bg-color: #E5E5E5;
     --secondary-bg-color: #F5F4FA;
-    --gray-bg-color: 2F303A;
+    --gray-bg-color: #2F303A;
+/* FONT-SIZE */
+    --reg-font-size: 14px;
 }
+/* GENERAL */
 body {
     background-color: var(--primary-bg-color);
 }
 ul {
     list-style: none;
 }
-.nav li,
-.nav-contacts li {
+.hidden {
+    display: none;
+}
+/* INLINE LISTS */
+.inline li {
     display: inline;
 }
+/* NAVIGATION */
 .nav a {
     color: var(--primary-text-color);
 }
@@ -29,4 +37,43 @@ ul {
 .nav-contacts a:hover,
 .nav-contacts a:focus {
     color: var(--accent-color);
+}
+/* HERO */
+.hero {
+    background-color: var(--gray-bg-color);
+    text-align: center;
+    vertical-align: middle;
+}
+.hero h1 {
+    color: var(--accent-color-white);
+    text-transform: uppercase;
+    font-size: 44px;
+}
+.hero button {
+    background-color: var(--accent-color);
+    color: var(--accent-color-white);
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+/* advantages */
+.advantages h3,
+.advantages p {
+    font-size: var(--reg-font-size);
+}
+
+
+.advantages h3 {
+    color: var(--primary-text-color);
+    text-transform: uppercase;
+}
+.advantages p {
+    color: var(--secondary-text-color);
+}
+
+
+
+/* TEAM */
+.team {
+    background-color: var(--secondary-bg-color);
 }
