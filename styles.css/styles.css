@@ -17,6 +17,7 @@ body {
     background-color: var(--primary-bg-color);
     font-family: 'Roboto-Bold', 'sans-serif';
     color: var(--primary-text-color);
+    cursor: pointer;
 }
 ul {
     list-style: none;
@@ -45,6 +46,7 @@ ul {
 .nav-contacts a {
     font-family: 'Roboto-Medium', 'sans-serif';
     font-size: var(--reg-font-size);
+    text-decoration: none;
 }
 .nav a:hover,
 .nav a:focus,
@@ -59,10 +61,12 @@ ul {
     font-size: var(--reg-font-size);
     font-style: normal;
     color: rgba(255, 255, 255, .6);
+    text-decoration: none;
 }
 .footer .contacts .adress {
 color: var(--accent-color-white);
 }
+
 /* LOGO */
 .logo,
 .footer-logo {
@@ -70,6 +74,7 @@ color: var(--accent-color-white);
     font-size: 26px;
     font-family: 'Raleway-Bold', 'sans-serif';
     font-weight: bold;
+    text-decoration: none;
 }
 .logo-header {
     color: var(--primary-text-color);
@@ -142,6 +147,7 @@ color: var(--accent-color-white);
     background-color: var(--secondary-bg-color);
     color: var(--primary-text-color);
     border-radius: 4px;
+    text-decoration: none;
 }
 .portfolio-menu a:hover,
 .portfolio-menu a:focus {
