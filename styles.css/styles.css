@@ -4,21 +4,35 @@
     --secondary-text-color: #757575;
     --accent-color: #2196F3;
     --accent-color-white: #FFFFFF;
+    --footer-links-color: rgba(255, 255, 255, 0.6);
 /* BACKGROUND */
     --primary-bg-color: #E5E5E5;
     --secondary-bg-color: #F5F4FA;
     --gray-bg-color: #2F303A;
-/* FONT-SIZE */
+/* FONT*/
+    --main-fs: 'Roboto';
+    --secondary-fs: 'Raleway';
+    --font-fam: 'sans-serif';
     --reg-font-size: 14px;
+    --h2-font-size: 36px;
+    --button-font-size: 16px;
+    --line-height: 1.2;
+    --letter-spacing: 0.03em;
+    --button-border-radius: 4px;
 }
-
 /* GENERAL */
 body {
     background-color: var(--primary-bg-color);
-    font-family: 'Roboto', sans-serif;
-    font-weight: normal;
+    font-family: --main-fs;
     color: var(--primary-text-color);
+    line-height: var(--line-height);
+    letter-spacing: var(--letter-spacing);
+    font-weight: 400;
+}
+a {
     cursor: pointer;
+    text-decoration: none;
+    font-style: normal;
 }
 ul {
     list-style: none;
@@ -26,146 +40,129 @@ ul {
 .hidden {
     display: none;
 }
-.common:active {
-    color: var(--accent-color);
-}
-.team h2,
-.area h2 {
-    text-align: center;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
-    letter-spacing: 0.03em;
-}
-/* INLINE LISTS */
 .inline li {
     display: inline;
 }
 
-/* HEADER+FOOTER */
-.nav a {
-    color: var(--primary-text-color);
+.team-heading,
+.area-heading {
+    text-align: center;
+    font-weight: 700;
+    font-size: var(--h2-font-size);
+    line-height: 1.16;
 }
-.nav-contacts a {
-    color: var(--secondary-text-color);
-}
-.nav a,
-.nav-contacts a {
-    font-size: var(--reg-font-size);
-    font-weight: 500;
-    line-height: 1.17;
-    text-decoration: none;
-    letter-spacing: 0.02em;
-}
-.nav a:hover,
-.nav a:focus,
-.nav-contacts a:hover,
-.nav-contacts a:focus {
-    color: var(--accent-color);
-}
+.hero,
 .footer {
     background-color: var(--gray-bg-color);
 }
-.footer .contacts a {
-    font-size: var(--reg-font-size);
-    color: rgba(255, 255, 255, .6);
-    font-style: normal;
-    line-height: 1.7;
-    letter-spacing: 0.03em;
-    text-decoration: none;
+.button {
+    border-radius: var(--button-border-radius);
+    font-size: var(--button-font-size);
 }
-.footer .contacts .adress {
-color: var(--accent-color-white);
+/* HEADER+FOOTER */
+header{
+    background-color: var(--accent-color-white);
 }
-
-/* LOGO */
-.logo,
-.footer-logo {
-    color: var(--accent-color);
-    font-family: 'Raleway', sans-serif;
-    font-size: 26px;
-    font-weight: 700;
-    line-height: 1.2;
-    letter-spacing: 0.03em;
-    text-decoration: none;
-}
-.logo-header {
+.nav-link {
     color: var(--primary-text-color);
 }
-.logo-footer {
+.contacts-link {
+    color: var(--secondary-text-color);
+}
+.nav-link,
+.contacts-link {
+    font-size: var(--reg-font-size);
+    font-weight: 500;
+    letter-spacing: 0.02em;
+}
+.nav-link:hover,
+.contacts-link:hover,
+.nav-link:focus,
+.contacts-link:focus,
+.footer-list a:hover,
+.footer-list a:focus {
+    color: var(--accent-color);
+}
+.footer-list a  {
+    line-height: 1.4;
+}
+.adress-link {
+    color: var(--footer-links-color);
+}
+.adress {
     color: var(--accent-color-white);
 }
-
-/* HERO */
-.hero {
-    background-color: var(--gray-bg-color);
-    text-align: center;
-    vertical-align: middle;
+/* LOGO */
+.header-logo,
+.footer-logo {
+    color: var(--accent-color);
+    font-family: var(--secondary-fs);
+    font-size: 26px;
+    font-weight: 700;
 }
-.hero h1 {
+.header-logo span {
+    color: var(--primary-text-color);
+}
+.footer-logo span {
+    color: var(--accent-color-white);
+}
+/* HERO */
+.hero-heading {
     color: var(--accent-color-white);
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
-    letter-spacing: 0.06em;
     text-transform: uppercase;
-    
+    text-align: center;
 }
-.hero button {
+.hero .button {
     background-color: var(--accent-color);
     color: var(--accent-color-white);
     font-size: 16px;
     font-weight: 700;
     line-height: 1.87;
+}
+.hero .button:hover,
+.hero .button:focus {
+    background-color: var(--accent-color-white);
+    color: var(--accent-color);
+}
+.hero-heading,
+.hero .button {
     letter-spacing: 0.06em;
-    border-radius: 4px;
 }
-
-/* advantages */
-.advantages h3,
-.advantages p {
-    font-size: var(--reg-font-size);
-}
-.advantages h3 {
-    color: var(--primary-text-color);
+/* ADVENTAGES */
+.advantages .list-heading {
     font-weight: 700;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
     text-transform: uppercase;
 }
-.advantages p {
-    color: var(--secondary-text-color);
+.advantages .advantages-text {
     line-height: 1.7;
-    letter-spacing: 0.03em;
 }
-
 /* TEAM */
 .team {
     background-color: var(--secondary-bg-color);
 }
-.team h3,
-.team p {
+.team .list-heading,
+.team .list-text {
     font-size: 16px;
     line-height: 1.18;
     text-align: center;
-    letter-spacing: 0.03em;
 }
-.team h3 {
+.team .list-heading {
     font-weight: 500;
 }
-
+.team .list-text {
+    color: var(--secondary-text-color);
+}
 /* PAGE PORTFOLIO */
 /* portfolio menu */
-.portfolio-menu.button {
-    font-size: 16px;
+.portfolio-menu .button {
     background-color: var(--secondary-bg-color);
     color: var(--primary-text-color);
     font-weight: 500;
     line-height: 1.6;
-    letter-spacing: 0.03em;
-    border-radius: 4px;
     text-align: center;
-    text-decoration: none;
 }
 .portfolio-menu .button:hover,
 .portfolio-menu .button:focus {
@@ -173,36 +170,16 @@ color: var(--accent-color-white);
     color: var(--accent-color-white);
 }
 /* portfolio list */
-.portfolio-list h2 {
-    font-weight: 700;
+.portfolio-heading {
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
+    font-weight: 700;
+    color: var(--primary-text-color);
 }
-.portfolio-list p {
-    font-size: 16px;
-    line-height: 1.87;
-    letter-spacing: 0.03em;
+.portfolio-text {
+    color: var(--secondary-text-color);
+    font-size: var(--button-font-size);
+    letter-spacing: 1.87;
 }
 
-/* FONTS
-@font-face {
-    font-family: 'Raleway-Bold';
-    src: url(/fonts/Raleway/Raleway-VariableFont_wght.ttf);
-}
-@font-face {
-    font-family: 'Roboto-Black';
-    src: url(/fonts/Roboto/Roboto-Black.ttf);
-}
-@font-face {
-    font-family: 'Roboto-Bold';
-    src: url(/fonts/Roboto/Roboto-Bold.ttf);
-}
-@font-face {
-    font-family: 'Roboto-Medium';
-    src: url(/fonts/Roboto/Roboto-Medium.ttf);
-}
-@font-face {
-    font-family: 'Roboto-Regular';
-    src: url(/fonts/Roboto/Roboto-Regular.ttf);
-} */
