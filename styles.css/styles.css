@@ -82,9 +82,7 @@ body {
 .nav-link:hover,
 .contacts-link:hover,
 .nav-link:focus,
-.contacts-link:focus,
-.footer-list a:hover,
-.footer-list a:focus {
+.contacts-link:focus {
     color: var(--accent-color);
 }
 .adress,
@@ -92,13 +90,16 @@ body {
     line-height: 1.7;
     font-size: 14px;
     letter-spacing: 0.03em;
-}
-.adress-link {
     color: var(--footer-links-color);
 }
-.adress {
+
+.adress-link:hover,
+.adress-link:focus,
+.adress:hover,
+.adress:focus {
     color: var(--accent-color-white);
 }
+
 /* LOGO */
 .header-logo,
 .footer-logo {
@@ -128,11 +129,6 @@ body {
     font-size: 16px;
     font-weight: 700;
     line-height: 1.87;
-}
-.hero-btn:hover,
-.hero-btn:focus {
-    background-color: var(--accent-color-white);
-    color: var(--accent-color);
 }
 .hero-heading,
 .hero-btn {
@@ -191,4 +187,3 @@ body {
     font-size: 16px;
     line-height: 1.87em;
 }
-
