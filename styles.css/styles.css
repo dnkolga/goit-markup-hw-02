@@ -189,6 +189,6 @@ body {
 .portfolio-text {
     color: var(--secondary-text-color);
     font-size: 16px;
-    letter-spacing: 1.87em;
+    line-height: 1.87em;
 }
 
