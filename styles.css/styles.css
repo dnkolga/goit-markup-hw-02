@@ -9,58 +9,61 @@
     --primary-bg-color: #E5E5E5;
     --secondary-bg-color: #F5F4FA;
     --gray-bg-color: #2F303A;
-/* FONT*/
-    --main-fs: 'Roboto';
-    --secondary-fs: 'Raleway';
-    --font-fam: 'sans-serif';
-    --reg-font-size: 14px;
-    --h2-font-size: 36px;
-    --button-font-size: 16px;
-    --line-height: 1.2;
-    --letter-spacing: 0.03em;
-    --button-border-radius: 4px;
 }
 /* GENERAL */
 body {
     background-color: var(--primary-bg-color);
-    font-family: var(--main-fs);
     color: var(--primary-text-color);
-    line-height: var(--line-height);
-    letter-spacing: var(--letter-spacing);
-    font-weight: 400;
+    font-family: 'Roboto', 'sans-serif';
+    color: var(--primary-text-color);
+    line-height: 1.2;
+    letter-spacing: 0.03em;
 }
-a {
+.link {
     text-decoration: none;
     font-style: normal;
 }
-ul {
+.list {
     list-style: none;
 }
-.hidden {
-    display: none;
+.header .common {
+    color: var(--accent-color);
 }
-.inline li {
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0)
+}
+.nav-item,
+.nav-contacts-item,
+.area-item, 
+.team-item,
+.portfolio-menu-item {
     display: inline;
 }
-
 .team-heading,
 .area-heading {
     text-align: center;
     font-weight: 700;
-    font-size: var(--h2-font-size);
+    font-size: 36px;
     line-height: 1.16;
 }
 .hero,
 .footer {
     background-color: var(--gray-bg-color);
 }
-.button {
-    border-radius: var(--button-border-radius);
-    font-size: var(--button-font-size);
+.btn {
+    border-radius: 4px;
+    font-size: 16px;
     cursor: pointer;
 }
 /* HEADER+FOOTER */
-header{
+.header{
     background-color: var(--accent-color-white);
 }
 .nav-link {
@@ -71,9 +74,10 @@ header{
 }
 .nav-link,
 .contacts-link {
-    font-size: var(--reg-font-size);
+    font-size: 14px;
     font-weight: 500;
     letter-spacing: 0.02em;
+    line-height: 1.14;
 }
 .nav-link:hover,
 .contacts-link:hover,
@@ -83,8 +87,11 @@ header{
 .footer-list a:focus {
     color: var(--accent-color);
 }
-.footer-list a  {
-    line-height: 1.4;
+.adress,
+.adress-link  {
+    line-height: 1.7;
+    font-size: 14px;
+    letter-spacing: 0.03em;
 }
 .adress-link {
     color: var(--footer-links-color);
@@ -96,7 +103,7 @@ header{
 .header-logo,
 .footer-logo {
     color: var(--accent-color);
-    font-family: var(--secondary-fs);
+    font-family: 'Raleway';
     font-size: 26px;
     font-weight: 700;
 }
@@ -115,57 +122,59 @@ header{
     text-transform: uppercase;
     text-align: center;
 }
-.hero .button {
+.hero-btn {
     background-color: var(--accent-color);
     color: var(--accent-color-white);
     font-size: 16px;
     font-weight: 700;
     line-height: 1.87;
 }
-.hero .button:hover,
-.hero .button:focus {
+.hero-btn:hover,
+.hero-btn:focus {
     background-color: var(--accent-color-white);
     color: var(--accent-color);
 }
 .hero-heading,
-.hero .button {
+.hero-btn {
     letter-spacing: 0.06em;
 }
 /* ADVENTAGES */
-.advantages .list-heading {
+.advantages-heading {
     font-weight: 700;
     text-transform: uppercase;
 }
-.advantages .advantages-text {
+.advantages-heading,
+.advantages-text {
+    font-size: 14px;
     line-height: 1.7;
 }
 /* TEAM */
 .team {
     background-color: var(--secondary-bg-color);
 }
-.team .list-heading,
-.team .list-text {
+.team-heading,
+.team-text {
     font-size: 16px;
     line-height: 1.18;
     text-align: center;
 }
-.team .list-heading {
+.team-heading {
     font-weight: 500;
 }
-.team .list-text {
+.team-text {
     color: var(--secondary-text-color);
 }
 /* PAGE PORTFOLIO */
 /* portfolio menu */
-.portfolio-menu .button {
+.portfolio-btn {
     background-color: var(--secondary-bg-color);
     color: var(--primary-text-color);
     font-weight: 500;
     line-height: 1.6;
     text-align: center;
 }
-.portfolio-menu .button:hover,
-.portfolio-menu .button:focus {
+.portfolio-btn:hover,
+.portfolio-btn:focus {
     background-color: var(--accent-color);
     color: var(--accent-color-white);
 }
@@ -179,7 +188,7 @@ header{
 }
 .portfolio-text {
     color: var(--secondary-text-color);
-    font-size: var(--button-font-size);
-    letter-spacing: 1.87;
+    font-size: 16px;
+    letter-spacing: 1.87em;
 }
 
