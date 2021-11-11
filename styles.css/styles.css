@@ -15,6 +15,11 @@ img {
 address {
     font-style: normal;
 }
+a {
+    color: inherit;
+    text-decoration: none;
+    font-style: normal;
+}
 
 :root {
 /* TEXT */
@@ -24,7 +29,7 @@ address {
     --accent-color-white: #FFFFFF;
     --footer-links-color: rgba(255, 255, 255, 0.6);
 /* BACKGROUND */
-    /* --primary-bg-color: #E5E5E5; */
+    --primary-bg-color: #FFFFFF;
     --secondary-bg-color: #F5F4FA;
     --gray-bg-color: #2F303A;
 }
@@ -39,35 +44,14 @@ body {
 }
 .container {
     width: 1200px;
-    padding: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
     margin-left: auto;
     margin-right: auto;
-}
-.link {
-    text-decoration: none;
-    font-style: normal;
+    /* border: olive solid 2px; */
 }
 .header .common {
     color: var(--accent-color);
-}
-.header-box {
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    justify-content: space-between;
-}
-.header-nav {
-    display: flex;
-}
-.header-logo {
-    margin-right: 93px;
-}
-.nav-item:not(:last-child),
-.nav-contacts-item:not(:last-child) {
-    padding-right: 50px;
-}
-.nav-contacts {
-    justify-content: flex-end;
 }
 .visually-hidden {
     position: absolute;
@@ -81,17 +65,9 @@ body {
 }
 .nav-item,
 .nav-contacts-item,
-.area-item, 
-.team-item,
+/* .team-item, */
 .portfolio-menu-item {
-    display: inline;
-}
-.team-main-heading,
-.area-heading {
-    text-align: center;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 1.16;
+    display: inline-block;
 }
 .hero,
 .footer {
@@ -139,7 +115,37 @@ body {
 .adress:focus {
     color: var(--accent-color-white);
 }
-
+.header-box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0;
+    margin-top: 32px;
+    margin-bottom: 32px;   
+}
+.header-nav {
+    display: flex;
+    align-items: center;
+}
+.header-logo {
+    margin-right: 93px;
+}
+.nav-item:not(:last-child),
+.nav-contacts-item:not(:last-child) {
+    padding-right: 50px;
+}
+.footer-box {
+    padding-top: 60px;
+    padding-bottom: 57px;
+}
+.footer-logo {
+    display: block;
+    margin-bottom: 20px;
+}
+.footer-item:not(:last-child):not(:last-child) {
+    margin-bottom: 9px;
+}
 /* LOGO */
 .header-logo,
 .footer-logo {
@@ -162,6 +168,7 @@ body {
     line-height: 1.36;
     text-transform: uppercase;
     text-align: center;
+    margin-bottom: 30px;
 }
 .hero-btn {
     background-color: var(--accent-color);
@@ -169,24 +176,69 @@ body {
     font-size: 16px;
     font-weight: 700;
     line-height: 1.87;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 32px 10px 32px;
 }
 .hero-heading,
 .hero-btn {
     letter-spacing: 0.06em;
 }
+.hero-box {
+    min-height: 600px;
+    padding-top: 200px;
+    margin-bottom: 94px;
+}
+.team-main-heading,
+.area-heading {
+    text-align: center;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    margin-bottom: 50px;
+}
 /* ADVENTAGES */
 .advantages-heading {
     font-weight: 700;
     text-transform: uppercase;
+    margin-bottom: 10px;
 }
 .advantages-heading,
 .advantages-text {
     font-size: 14px;
     line-height: 1.7;
 }
+.advantages-box,
+.team-box {
+    margin-bottom: 94px;
+}
+.advantages-list {
+    display: flex;
+    justify-content: space-between;
+}
+.advantages-item {
+    width: 270px;
+}
+/* AREA */
+.area-list,
+.team-list {
+    display: flex;
+    justify-content: space-between;
+}
+.area-box {
+    margin-bottom: 188px;
+}
+
 /* TEAM */
 .team {
     background-color: var(--secondary-bg-color);
+}
+.team-img {
+    margin-bottom: 30px;
+}
+.team-heading {
+    margin-bottom: 10px;
 }
 .team-heading,
 .team-text {
@@ -202,9 +254,20 @@ body {
 }
 /* PAGE PORTFOLIO */
 /* portfolio menu */
+.portfolio-box {
+    margin-top: 94px;
+    margin-bottom: 94px;
+}
+.portfolio-menu-item {
+    margin-right: 8px;
+}
+.portfolio-btn {
+    padding: 6px 22px 6px 22px;
+}
 .portfolio-menu-list {
     display: flex;
     justify-content: center;
+    margin-bottom: 50px;
 }
 .portfolio-list {
     display: flex;
@@ -224,15 +287,25 @@ body {
     color: var(--accent-color-white);
 }
 /* portfolio list */
+.portfolio-item img {
+    margin-bottom: 20px;
+}
+/* класс для img */
 .portfolio-heading {
     font-size: 18px;
     line-height: 2;
     letter-spacing: 0.06em;
     font-weight: 700;
     color: var(--primary-text-color);
+    margin-bottom: 4px;
 }
 .portfolio-text {
     color: var(--secondary-text-color);
     font-size: 16px;
     line-height: 1.87em;
+    margin-bottom: 20px;
 }
+.portfolio-item {
+    margin-bottom: 30px;
+}
+/* MARGIN 30 последнего ряда */
